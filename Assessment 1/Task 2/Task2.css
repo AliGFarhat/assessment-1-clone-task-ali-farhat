@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Guerrilla&family=Teko:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Guerrilla&family=Teko:wght@300..700&display=swap');
 
-/* Color Wheel */
+/* Color Wheel for Easy specified color access */
 :root {
     --clr1: #4dccbd;
     --clr2: #ffffff;
@@ -34,12 +34,14 @@ p {
     font-family: "Lato";
 }
 
+/* The header bar css code */
 header {
     padding: 16px;
     border-bottom: var(--clr1) solid 1px;
     background-color: var(--clr3);
 }
 
+/* Nav bar arrangements for the items in list. */
 nav {
     display: flex;
     justify-content: space-between;
@@ -47,6 +49,7 @@ nav {
     background: none;
 }
 
+/* Logo (top left) css code. */
 .logo {
     height: fit-content;
     color: var(--clr2);
@@ -71,6 +74,7 @@ ul {
     margin: 0;
 }
 
+/* Search button css code (top right) */
 .search-button {
     color: var(--clr4);
 }
@@ -79,6 +83,7 @@ ul {
     cursor: pointer;
 }
 
+/* CSS code for all the buttons within the page. */
 button {
     padding: 16px;
     border-radius: 16px;
@@ -91,6 +96,7 @@ button:hover {
     transition: ease 0.35s;
 }
 
+/* This contains all the poster sections css code. */
 .page-container {
     display: grid;
     grid-template-columns: 1fr; 
@@ -110,7 +116,7 @@ button:hover {
     width: 100%; 
     height: auto;
 }
-    
+/* This contains all the text such as headings and paragraphs. */
 .details { 
     display: grid;
     grid-template-columns: 1fr; 
