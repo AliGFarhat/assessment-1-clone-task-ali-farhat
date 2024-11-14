@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Guerrilla&display=swap');
+
+* {
+    margin: 0;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #d3d3d3;
+    color: #14181d;
+}
+
+main {
+    border-style: solid;
+}
+
+header {
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #14181d;
+}
+
+nav ul {
+    padding: 0 0 0 0;
+}
+
+img {
+    width: 100%;
+}
+
+.author-image-container {
+    width: 200px;
+    height: auto;
+}
+
+main {
+    background-color: #ffffff;
+}
+
+.author-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.author {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; 
+    padding: 1em;
+    text-align: center;
+}
+
+.author-text-container {
+    font-family: 'Josefin Sans';
+    font-size: 45px;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.author-text-container p {
+    font-size: 18px;
+    padding-right: 10%;
+    padding-left: 10%;
+    text-align: left;
+    padding-top: 50px;
+}
+
+@media (min-width: 1025px) {
+/* Desktop Responsiveness */
+
+    #album1 {
+        grid-area: album1;
+    }   
+    #album2 {
+        grid-area: album2;
+    }
+    #album3 {
+        grid-area: album3;
+    }
+    #album4 {
+        grid-area: album4;
+    }
+    #album5 {
+        grid-area: album5;
+    }
+    
+    .albums {
+        width: 100%;
+    
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    
+        grid-template-areas:
+        'album1 album1 album2 album3'
+        'album1 album1 album4 album5';
+    }
+
+    .first-text h1{
+        font-size: 130px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+
+    .first-text h2 {
+        font-size: 45px;
+        font-family: 'Protest Guerrilla';
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+    }
+
+    .first-text p {
+        font-size: 30px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 18%;
+        margin-top: 10px;
+        margin-bottom: 35px;
+    }
+
+    .logo {
+        width: 200px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .author {
+        margin: 50px;
+    }
+
+    article {
+        margin: 0 50px;
+        margin-bottom: 50px;
+        column-count: 3;
+        column-gap: 50px;
+    }
+
+    article h2 {
+        font-size: 45px;
+        font-family: 'Protest Guerrilla';
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+    
+    h1 {
+        padding-bottom: 50px;
+        font-size: 30px;
+        font-family: "Protest Guerrilla";
+    }
+    
+    p {
+        font-family: "Josefin Sans";
+        padding-bottom: 50px;
+    }
+
+    main {
+        width: 60%;
+    }
+
+    footer {
+        background-color: #14181d;
+        color: white;
+        text-align: center;
+        font-size: 0.9em;
+        padding-top: 50px;
+        font-size: 16px;
+        font-family: 'Josefin Sans';
+    }
+
+    .author-text-container {
+        padding: 0%;
+    }
+}
+
+@media (max-width: 1024px) { 
+    /* Tablet Responsiveness */
+
+    
+    main {
+        width: 80%;
+    }
+
+    #album1 {
+        display: none;
+    }
+    #album2 {
+        grid-area: album2;
+    }
+    #album3 {
+        grid-area: album3;
+    }
+    #album4 {
+        grid-area: album4;
+    }
+    #album5 {
+        grid-area: album5;
+    }
+    
+    .albums {
+        width: 100%;
+    
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    
+        grid-template-areas:
+        'album2 album3'
+        'album4 album5';
+        padding-bottom: 50px;
+    }
+
+    .logo {
+        width: 80px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .first-text h1, h2 {
+        text-align: center;
+    }
+
+    article {
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 50px;
+    }
+    article h2 {
+        text-align: center;
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 110px;
+        margin-bottom: 25px;
+    }
+
+    .first-text h1{
+        font-size: 50px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 0px;
+    }
+
+    .first-text h2 {
+        font-size: 40px;
+        font-family: 'Protest Guerrilla';
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+    }
+
+    .first-text p {
+        font-size: 20px;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-bottom: 25px;
+    }
+
+    .author {
+        padding-bottom: 50px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    
+    .author-text-container {
+        font-family: 'Josefin Sans';
+        font-size: 25px;
+        margin-bottom: 10px;
+        flex: 1;
+    }
+    
+    .author-text-container p {
+        font-size: 15px;
+        padding-top: 25px;
+        padding-right: 25px;
+        padding-left: 25px;
+        text-align: left;
+    }
+
+    footer {
+        background-color: #14181d;
+        color: white;
+        text-align: center;
+        font-size: 0.9em;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 16px;
+        font-family: 'Josefin Sans';
+    }
+
+}
+
+@media (max-width: 720px) {
+/* Large Mobile Responsiveness */
+    main {
+        width: 100%;
+    }
+
+    #album1 {
+        display: none;
+    }   
+    #album2 {
+        grid-area: album2;
+    }
+    #album3 {
+        grid-area: album3;
+    }
+    #album4 {
+        grid-area: album4;
+    }
+    #album5 {
+        grid-area: album5;
+    }
+
+    .albums {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+
+        grid-template-areas:
+        'album2'
+        'album3'
+        'album4'
+        'album5';
+    }
+
+    .author {
+        padding-bottom: 50px;
+        padding-right: 50px;
+        padding-left: 50px;
+        flex-direction: column;
+    }
+
+    .author-text-container {
+        font-family: 'Josefin Sans';
+        font-size: 25px;
+        margin-bottom: 10px;
+        flex: 1;
+    }
+    
+    .author-text-container p {
+        font-size: 15px;
+        padding-top: 25px;
+        padding-right: 25px;
+        padding-left: 25px;
+        text-align: left;
+    }
+
+    .author-photo {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 540px) {
+/* Small Mobile Responsiveness */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    margin-bottom: 25px;
+}
+
+}

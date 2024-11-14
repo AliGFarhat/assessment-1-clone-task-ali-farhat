@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Guerrilla&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Guerrilla&family=Teko:wght@300..700&display=swap');
+
+/* Color Wheel */
+:root {
+    --clr1: #4dccbd;
+    --clr2: #ffffff;
+    --clr3: #231651;
+    --clr4: #070410;
+    --clr5: #eef36a;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    font-family: "Teko";
+}
+
+button {
+    font-size: 2em;
+
+    letter-spacing: 0;
+    font-family: "Teko";
+}
+
+p {
+    font-size: 1em;
+    font-family: "Lato";
+}
+
+header {
+    padding: 16px;
+    border-bottom: var(--clr1) solid 1px;
+    background-color: var(--clr3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+}
+
+.logo {
+    height: fit-content;
+    color: var(--clr2);
+}
+
+.logo:hover {
+    cursor: pointer;
+    color: var(--clr5);
+}
+
+.nav-bar {
+    display: none;
+}
+
+ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    color: var(--clr2);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.search-button {
+    color: var(--clr4);
+}
+
+.search-button:hover {
+    cursor: pointer;
+}
+
+button {
+    padding: 16px;
+    border-radius: 16px;
+    line-height: 16px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--clr5);
+    transition: ease 0.35s;
+}
+
+.page-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    row-gap: 16px; 
+    margin: 16px 0; 
+} 
+    
+.poster { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    row-gap: 16px; width: 100%; 
+    border: solid var(--clr1) 2px; 
+    background-color: var(--clr3); 
+} 
+    
+.image-container img { 
+    width: 100%; 
+    height: auto;
+}
+    
+.details { 
+    display: grid;
+    grid-template-columns: 1fr; 
+    row-gap: 16px; 
+} 
+    
+.details p { 
+    color: var(--clr2); 
+    font-size: 1.5em; 
+    margin: 0 16px; 
+} 
+    
+.details p .title { 
+    font-size: 2rem; 
+    font-family: "Teko"; 
+    font-weight: bold; 
+    color: var(--clr2);
+} 
+
+.details p .title:hover { 
+    cursor: pointer; 
+    color: var(--clr5); 
+}
+    
+.details button { 
+    background-color: var(--clr4); 
+    padding: 16px 0; margin: 16px;
+    border-radius: 16px; 
+    transition: ease-in 0.35s;
+} 
+    
+.details button:hover { 
+    cursor: pointer; 
+    background-color: var(--clr5); 
+}
+
+@media (min-width: 1025px) { 
+/* Desktop Responsiveness */
+    body {
+        background-color: var(--clr4);
+    
+    }
+
+    /* grid accoring to IDs */
+    #poster1 {
+        grid-area: poster1;
+    }
+    #poster2 {
+        grid-area: poster2;
+    }
+    #poster3 {
+        grid-area: poster3;
+    }
+    #poster4 {
+        grid-area: poster4;
+    }
+    #poster5 {
+        grid-area: poster5;
+    }
+    #poster6 {
+        grid-area: poster6;
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+    
+    header {
+        padding: 16px;
+        border-bottom: var(--clr1) solid 10px;
+        box-shadow: #60ffec 0px 2px 7.5px;
+        background-color: var(--clr3);
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        transition: 0.35s ease;
+    }
+    
+    .logo {
+        color: var(--clr2);
+    }
+    
+    /* Hover Effect for Logo in top left */
+    .logo:hover {
+        cursor: grabbing;
+        color: var(--clr3);
+        transition: ease 0.35s;
+    }
+    
+    .nav-bar {
+        display: block;
+    }
+    
+    .nav-bar ul {
+        display: flex; 
+        gap: 48px;
+        list-style: none;
+        color: var(--clr2);
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        transition: ease 0.35s;
+    }
+    
+    .nav-bar li:hover {
+        cursor: pointer;
+        color: var(--clr3);
+    }
+    
+    button .search-button {
+        color: var(--clr1);
+    }
+
+    button {
+        padding: 16px;
+        border-radius: 16px;
+        color: var(--clr2);
+    }
+    
+    button:hover {
+        cursor: pointer;
+        background-color: var(--clr5);
+        transition: ease 0.35s;
+    }
+
+    .search-button {
+        padding-top: 0.6em;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Arranging the poster sections to a grid */
+    .page-container {
+        max-width: 900px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 48px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+        row-gap: 48px;
+        column-gap: 48px;
+        grid-template-areas: 
+        'poster1 poster1'
+        'poster2 poster3'
+        'poster4 poster4'
+        'poster5 poster5'
+        'poster6 poster6';
+    }
+    
+    #poster1 .image-container {
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    #poster1 .image-container img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Poster 1 CSS */
+    #poster1 .details .title{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    #poster1 .details p {
+        flex: 2;
+    }
+    
+    #poster1 .details button {
+        align-self: center;
+    }
+
+    /* The Rest of the Posters CSS */
+    #poster4, #poster5, #poster6 {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+    }
+    
+    /* All Poster CSS */
+    .poster {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+        width: 100%;
+        border: solid var(--clr1) 2px;
+        background-color: var(--clr1);
+        box-shadow: 16px 16px 10px var(--clr4);
+    }
+    
+    .poster .image-container img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .poster .details {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+    }
+    
+    .poster .details p {
+        min-height: 140px;
+        color: var(--clr2);
+        font-size: 1.5em;
+        margin: 0 16px;
+    }
+    
+    .poster .details p .title {
+        font-size: 2rem;
+        font-family: "Teko", sans-serif;
+        font-weight: bold;
+        color: var(--clr2);
+    }
+    
+    .poster .details p .title:hover {
+        cursor: pointer;
+        color: var(--clr5);
+    }
+    
+    .poster .details button {
+        background-color: var(--clr4);
+        line-height: 1.5; 
+        padding: 16px 0;
+        margin: 16px;
+        border-radius: 16px;
+    }
+    
+    .poster .details button:hover {
+        cursor: pointer;
+        background-color: var(--clr5);
+    }
+    
+    .poster:hover {
+        box-shadow: 16px 16px 16px var(--clr3);
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+/* Tablet Responsiveness */
+
+    body {
+        background-color: var(--clr4);
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    header {
+        padding: 16px;
+        border-bottom: var(--clr1) solid 10px;
+        box-shadow: #60ffec 0px 2px 7.5px;
+        background-color: var(--clr3);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        transition: 0.35s ease;
+    }
+
+    .logo {
+        color: var(--clr2);
+        transition: 0.35s ease;
+    }
+
+    .logo:hover {
+        cursor: grabbing;
+        color: var(--clr4);
+    }
+
+    .nav-bar {
+        display: block;
+        transition: 0.35s ease;
+    }
+
+    .nav-bar ul {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+        color: var(--clr2);
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        transition: 0.35s ease;
+    }
+
+    .nav-bar li:hover {
+        cursor: pointer;
+        color: var(--clr5);
+    }
+
+    button {
+        padding: 16px;
+        border-radius: 16px;
+        color: var(--clr2);
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: var(--clr5);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease;
+    }
+
+    .page-container {
+        max-width: 900px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 32px;
+        column-gap: 32px;
+        transition: 0.5s ease;
+    }
+
+    .poster {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+        width: 100%;
+        border: solid var(--clr3) 2px;
+        background-color: var(--clr1);
+        transition: 0.5s ease;
+    }
+
+    .poster:hover {
+        box-shadow: 16px 16px 16px var(--clr3);
+    }
+
+    .poster .details {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        transition: 0.5s ease;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.5s ease;
+    }
+
+    .details p .title {
+        font-size: 2rem;
+        font-family: "Teko", sans-serif;
+        font-weight: bold;
+        color: var(--clr2);
+        transition: 0.5
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+    /* Tablet Responsiveness */
+    body {
+        background-color: var(--clr4);
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    header {
+        padding: 16px;
+        border-bottom: var(--clr1) solid 10px;
+        box-shadow: #60ffec 0px 2px 7.5px;
+        background-color: var(--clr3);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        transition: 0.35s ease;
+    }
+
+    .logo {
+        color: var(--clr2);
+        transition: 0.35s ease;
+    }
+
+    .logo:hover {
+        cursor: grabbing;
+        color: var(--clr4);
+    }
+
+    .nav-bar {
+        display: block;
+        transition: 0.35s ease;
+    }
+
+    .nav-bar ul {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+        color: var(--clr2);
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        transition: 0.35s ease;
+    }
+
+    .nav-bar li:hover {
+        cursor: pointer;
+        color: var(--clr5);
+    }
+
+    button {
+        padding: 16px;
+        border-radius: 16px;
+        color: var(--clr2);
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: var(--clr5);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease;
+    }
+
+    .page-container {
+        max-width: 900px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 32px;
+        column-gap: 32px;
+        transition: 0.5s ease;
+    }
+
+    .poster {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+        width: 100%;
+        border: solid var(--clr3) 2px;
+        background-color: var(--clr1);
+        transition: 0.5s ease;
+    }
+
+    .poster:hover {
+        box-shadow: 16px 16px 16px var(--clr3);
+    }
+
+    .poster .details {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        transition: 0.5s ease;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.5s ease;
+    }
+
+    .details p .title {
+        font-size: 2rem;
+        font-family: "Teko", sans-serif;
+        font-weight: bold;
+        color: var(--clr2);
+        transition: 0.5
+    }
+}
+
+@media (min-width: 360px) and (max-width: 720px) {
+    /* Mobile Responsiveness */
+
+    body {
+        background-color: var(--clr4);
+    }
+    
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+        font-family: "Teko";
+    }
+    
+    button {
+        font-size: 2em;
+    
+        letter-spacing: 0;
+        font-family: "Teko";
+    }
+    
+    p {
+        font-size: 1em;
+        font-family: "Lato";
+    }
+    
+    header {
+        padding: 16px;
+        border-bottom: var(--clr1) solid 1px;
+        background-color: var(--clr3);
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+    }
+    
+    .logo {
+        height: fit-content;
+        color: var(--clr2);
+    }
+    
+    .logo:hover {
+        cursor: pointer;
+        color: var(--clr5);
+    }
+    
+    .nav-bar {
+        display: none;
+    }
+    
+    ul {
+        display: flex;
+        gap: 16px;
+        list-style: none;
+        color: var(--clr2);
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .search-button {
+        color: var(--clr4);
+    }
+    
+    .search-button:hover {
+        cursor: pointer;
+    }
+    
+    button {
+        padding: 16px;
+        border-radius: 16px;
+        line-height: 16px;
+        color: var(--clr2);
+    }
+    
+    button:hover {
+        cursor: pointer;
+        background-color: var(--clr5);
+        transition: ease 0.35s;
+    }
+    
+    .page-container {
+        display: grid;
+        grid-template-columns: 1fr; 
+        row-gap: 16px; 
+        margin: 16px 0; 
+    } 
+        
+    .poster { 
+        display: grid; 
+        grid-template-columns: 1fr; 
+        row-gap: 16px; width: 100%; 
+        border: solid var(--clr3) 2px; 
+        background-color: var(--clr1);
+    } 
+
+    .poster:hover {
+        box-shadow: 16px 16px 16px var(--clr3);
+    }
+
+    .poster .details {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+        
+    .image-container img { 
+        width: 100%; 
+        height: auto;
+    }
+        
+    .details { 
+        display: grid;
+        grid-template-columns: 1fr; 
+        row-gap: 16px; 
+    } 
+
+    .details h1 {
+        padding-left: 35px;
+    }
+        
+    .details p { 
+        color: var(--clr2); 
+        font-size: 1.5em; 
+        padding-left: 35px;
+    } 
+        
+    .details p .title { 
+        font-size: 2rem; 
+        font-family: "Teko"; 
+        font-weight: bold; 
+        color: var(--clr2);
+    } 
+    
+    .details p .title:hover { 
+        cursor: pointer; 
+        color: var(--clr5); 
+    }
+        
+    .details button { 
+        background-color: var(--clr4); 
+        padding: 16px 0; margin: 16px;
+        border-radius: 16px; 
+        transition: ease-in 0.35s;
+    } 
+        
+    .details button:hover { 
+        cursor: pointer; 
+        background-color: var(--clr5); 
+    }
+}
