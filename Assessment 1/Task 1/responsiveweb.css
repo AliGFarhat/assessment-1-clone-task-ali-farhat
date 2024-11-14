@@ -1,3 +1,4 @@
+/* importing both fonts through google fonts. */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Guerrilla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Guerrilla&display=swap');
 
@@ -5,6 +6,7 @@
     margin: 0;
 }
 
+/* the visible page of white background sizing. */
 .center {
     display: flex;
     flex-direction: column;
@@ -12,48 +14,58 @@
     align-items: center;
 }
 
+/* most of the html code is included in this one. */
 body {
     overflow-x: hidden;
     background-color: #d3d3d3;
     color: #14181d;
 }
 
+/* Setting border sytle to solid color */
 main {
     border-style: solid;
 }
 
+/* Aligns all text within <header> to the center */
 header {
     text-align: center;
 }
 
+/* Navigation bar text color and removing the feature where the hyperlinks turn purple once the link has been visited once. */
 nav a {
     text-decoration: none;
     color: #14181d;
 }
 
+/* Seems to have been a bug across all my codes, it is where the nav bar has an invisible left padding that wont be removed unless I do this. */
 nav ul {
     padding: 0 0 0 0;
 }
 
+/* Set all the images to their full size (100%) */
 img {
     width: 100%;
 }
 
+/* Author image container size adjustment */
 .author-image-container {
     width: 200px;
     height: auto;
 }
 
+/* Background color of the main "white" page as mentioned earlier in the code */
 main {
     background-color: #ffffff;
 }
 
+/* Setting the author picture to 100% (It is later set to 200px within the @media sections for responsiveness) */
 .author-photo {
     width: 100%;
     height: auto;
     border-radius: 50%;
 }
 
+/* All author section content arrangement and padding. */
 .author {
     display: flex;
     flex-direction: row-reverse;
@@ -62,6 +74,7 @@ main {
     text-align: center;
 }
 
+/* Setting the font for the all the author container as well as some spacing. */
 .author-text-container {
     font-family: 'Josefin Sans';
     font-size: 45px;
@@ -69,6 +82,7 @@ main {
     flex: 1;
 }
 
+/* Author text container paragraph css adjustments.*/
 .author-text-container p {
     font-size: 18px;
     padding-right: 10%;
@@ -80,6 +94,7 @@ main {
 @media (min-width: 1025px) {
 /* Desktop Responsiveness */
 
+/* Calling the ids of the images and assigning them grids */
     #album1 {
         grid-area: album1;
     }   
@@ -95,7 +110,8 @@ main {
     #album5 {
         grid-area: album5;
     }
-    
+
+/* Setting the grids size in columns and rows, then arranging them in order specified. */
     .albums {
         width: 100%;
     
